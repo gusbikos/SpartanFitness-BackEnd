@@ -14,5 +14,10 @@ Rails.application.routes.draw do
 
   get "/me", to: "users#me"
   patch "/me", to: "users#update"
+
+
+  # get "/cart_items", to: "cartitems"
+  post "/cart_items", to: "cart_items#create"
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

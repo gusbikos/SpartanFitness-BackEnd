@@ -5,7 +5,7 @@ class UserSerializer < ActiveModel::Serializer
   # has_many :gym_classes, through: :scheduled_classes
   # has_many :class_reviews 
   # has_many :gym_classes, through: :class_reviews
-  # has_many :cart_items
+  has_many :cart_items
   # has_many :items, through: :cart_items
 
 end

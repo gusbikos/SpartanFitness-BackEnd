@@ -40,7 +40,7 @@ class CartItemsController < ApplicationController
     private 
 
     def cartItem_params 
-        params.permit(:user_id, :item_id, :image)
+        params.permit(:user_id, :item_id, :item)
     end 
 
 end

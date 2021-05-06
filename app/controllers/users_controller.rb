@@ -15,7 +15,7 @@ class UsersController < ApplicationController
         #////// FAKE AUTH WAY //////
         # user =  User.first #User.find(name: params[:name])
         # render json: user
-        const token = localStorage.setItem("token")
+        # const token = localStorage.setItem("token")
 
         user = User.find_by(name: params[:username])
         # byebug
