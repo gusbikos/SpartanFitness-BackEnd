@@ -16,8 +16,10 @@ class CartItemsController < ApplicationController
     end 
 
     def create 
+        item = Item.find(params[:item_id])
+        item.update(quantity: item.quantity - 1)
         cartItem = CartItem.create(cartItem_params)
-        render json: cartItem 
+        render json: cartItem
     end 
 
     def edit 
@@ -32,7 +34,9 @@ class CartItemsController < ApplicationController
     end 
 
     def destroy 
-        cartItem = CartItem.find(params[:id])
+        item = Item.find(params[:item_id])
+        item.update(quantity: item.quantity + 1)
+        cartItem = CartItem.find_by(params[:id])
         cartItem.destroy
         render json: cartItem
     end 

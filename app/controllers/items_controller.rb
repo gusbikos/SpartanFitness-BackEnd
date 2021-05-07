@@ -38,7 +38,6 @@ class ItemsController < ApplicationController
     end 
 
     private 
-
     def item_params 
         params.permit(:name, :price, :description, :quantity, :image)
     end 
