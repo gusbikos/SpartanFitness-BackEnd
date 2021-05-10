@@ -38,6 +38,6 @@ Item.create(name: "Mouth Guard", price: 15, description: "mouth guard", quantity
 
 
 # Item Reviews
-ItemReview.create(rating: 5, review: "Great pair of gloves!", item_id: 1)
+# ItemReview.create(rating: 5, review: "Great pair of gloves!", item_id: 1)
 
 puts "🥷🏻 🥷🏻 🥷🏻 🥷🏻 🥷🏻 🥷🏻 🥷🏻 🥷🏻 🥷🏻 🥷🏻"

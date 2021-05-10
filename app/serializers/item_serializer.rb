@@ -3,5 +3,5 @@ class ItemSerializer < ActiveModel::Serializer
 
   # has_many :cart_items
   # has_many :users, through: :cart_items
-  # has_many :item_reviews
+  has_many :item_reviews
 end
