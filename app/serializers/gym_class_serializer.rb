@@ -1,5 +1,5 @@
 class GymClassSerializer < ActiveModel::Serializer
-  attributes :id, :time, :date, :booked
+  attributes :id, :time, :date, :booked, :style
 
   # has_many :scheduled_classes
   # has_many :users, through: :scheduled_classes

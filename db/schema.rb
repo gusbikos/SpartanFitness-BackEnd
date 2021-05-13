@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_30_192945) do
+ActiveRecord::Schema.define(version: 2021_05_11_205735) do
 
   create_table "cart_items", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -26,10 +26,8 @@ ActiveRecord::Schema.define(version: 2021_04_30_192945) do
     t.string "description"
     t.integer "rating"
     t.integer "user_id", null: false
-    t.integer "gym_class_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["gym_class_id"], name: "index_class_reviews_on_gym_class_id"
     t.index ["user_id"], name: "index_class_reviews_on_user_id"
   end
 
@@ -39,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_192945) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "time"
+    t.string "style"
   end
 
   create_table "item_reviews", force: :cascade do |t|
@@ -79,7 +78,6 @@ ActiveRecord::Schema.define(version: 2021_04_30_192945) do
 
   add_foreign_key "cart_items", "items"
   add_foreign_key "cart_items", "users"
-  add_foreign_key "class_reviews", "gym_classes"
   add_foreign_key "class_reviews", "users"
   add_foreign_key "item_reviews", "items"
   add_foreign_key "scheduled_classes", "gym_classes"

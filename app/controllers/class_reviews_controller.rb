@@ -40,7 +40,7 @@ class ClassReviewsController < ApplicationController
     private 
 
     def classReviews_params 
-        params.permit(:name, :password)
+        params.permit(:description, :rating, :user_id)
     end 
     
 end

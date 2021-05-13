@@ -26,6 +26,7 @@ class ItemsController < ApplicationController
     end 
 
     def update 
+        itemReview = ItemReview.find(params[:id])
         item = Item.find(params[:id])
         item.update(item_params)
         render json: item
